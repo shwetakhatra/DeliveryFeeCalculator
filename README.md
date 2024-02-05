@@ -25,9 +25,8 @@ Run unit tests:
 # npm
 npm test
 
-## Folder Structure
-
   ```
+## Folder Structure
     delivery-fee-calculator
     │   README.md
     │   index.tsx   
