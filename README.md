@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+# Delivery fee calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the demo calculator. The application calculates delivery charges by considering various scenarios.
 
-## Available Scripts
+## Setup
 
-In the project directory, you can run:
+Make sure to install the dependencies:
 
-### `npm start`
+```bash
+# npm
+npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Development Server
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Start the development server on `http://localhost:3000`:
 
-### `npm test`
+```bash
+# npm
+npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Run unit tests:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# npm
+npm test
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Folder Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ```
+    delivery-fee-calculator
+    │   README.md
+    │   index.tsx   
+    │   ...
+    │   
+    |───public
+    │   └── favicon.ico
+    │   
+    └───src
+        |── components
+        │   └── Button
+                └── PrimaryButton.tsx
+                └── PrimaryButton.test.tsx
+            |
+        │   └── FeeCalculator.tsx
+        |── interfaces
+        │   └── button.interfaces.ts
+        |── utils
+        │   └── index.tsx
+        │   index.tsx
+        │   App.tsx
+        │   App.test.tsx
+        │   App.css
+        │   package.json
+        │   ...
+        ...
 
-### `npm run eject`
+  ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  - ```public``` folder contains a file that will be read by the browser.
+  - ```utils``` folder has different functions which can be imported to ```FeeCalculator.tsx``` to caculate delivery fee under different conditions. 
+  - ```main.tsx``` is the one where the main render call is happening by ReactDOM.render() method. The method ReactDOM.render() injects the React application into the ```<div id="root">``` so that the app can be rendered in the browser.
+  - ```App.tsx``` is a React component called “App”. This component will be the root component to all the other components. As this project is small, this is also a controlled components which control to submit a from.
+  - ```App.css``` stores styling targeting the App component specifically.
+  - ```package.json``` lists all the dependencies and scripts needed to run the React app successfully.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
